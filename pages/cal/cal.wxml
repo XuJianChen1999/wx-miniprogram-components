@@ -1,11 +1,11 @@
 <!--pages/cal/cal.wxml-->
-<button style="margin:35rpx 0" bindtap="onClickShowCalendar">打开日历</button>
-<view class="wrapper {{isShowCalendar?'ac':''}}">
-	<block wx:if="{{isShowCalendar}}">
+<view class="container">
+	<button style="margin:35rpx 0" bindtap="onClickShowCalendar">打开日历</button>
+	<view class="wrapper {{isShowCalendar?'ac':'hide'}}">
 		<calendar id="calendar" isOpen="{{true}}" selected="{{selectedDays}}" lockDay="{{lockday}}" bind:select="cmfclick" bind:getdate="getdate" bind:checkall="checkall" bind:clear="clear"></calendar>
-	</block>
-	
+	</view>
 </view>
+
 
 
 

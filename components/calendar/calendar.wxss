@@ -15,13 +15,6 @@ cover-view{
   transition: all 0.3s;
   opacity: 0;
 }
-.calendar-container{
-  transform: translateY(850rpx);
-  transition: transform cubic-bezier(0, 1.05, 0.6, 1.01) .3s;
-}
-.calendar-container-ac{
-  transform: translateY(0);
-}
 .calendar-box.active {
   opacity: 1;
 }

@@ -4,11 +4,14 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
 }
-.wrapper{
-  transform: translateY(750rpx);
-  transition: transform cubic-bezier(0, 1.05, 0.6, 1.01) .3s;
+.hide{
+  transform: translateY(950rpx);
+  transition: transform cubic-bezier(0, 1.05, 0.6, 1.01) .4s;
 }
 .ac{
   transform: translateY(0);
+  transition: transform cubic-bezier(0, 1.05, 0.6, 1.01) .4s;
 }

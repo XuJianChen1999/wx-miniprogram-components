@@ -37,6 +37,9 @@ Page({
   */
   cmfclick(e){
     console.log(e.detail.selectDays);
+    this.setData({
+      isShowCalendar: false
+    })
   },
   /** 
   * 点击清空事件
