@@ -84,28 +84,6 @@ button{
   width: 600rpx;
   margin: 80rpx 0 30rpx 0;
 }
-/* 右侧弹出 */
-.right-popup-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 350rpx;
-  height: 100vh;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  background-color: #fff;
-  transform: translateX(350rpx);
-  transition: transform cubic-bezier(0, 1.05, 0.6, 1.01) .3s;
-  border-radius: 30rpx 0 0 30rpx;
-  font-size: 80rpx;
-  font-weight: bolder;
-  color: red;
-}
-.right-popup-container-ac{
-  transform: translateX(0);
-}
 /* 底部弹出 */
 .bottom-modal-container{
   position: absolute;

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "calendar": "../../components/calendar/calendar",
+    "calendar-angle": "../../components/calendar-angle-click/calendar-angle-click"
+  },
+  "navigationBarTitleText": "日历组件"
+}

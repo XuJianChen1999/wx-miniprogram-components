@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/dialog/dialog",
-    "pages/notices/notices"
+    "pages/notices/notices",
+    "pages/cal/cal"
   ],
   "window":{
     "backgroundTextStyle":"light",
