@@ -1,0 +1,19 @@
+<!--components/notice/notice.wxml-->
+<view class="main-container">
+	<!-- 顶部滑下形式 -->
+	<view class="notice-container {{isShowNotice?'down-anim':'up-anim'}}">
+		篡改i有gay参与蓄电池不i该i不舒服情爱故事返回别hi是凑近安华高
+	</view>
+
+
+	<!-- 文字滚动形式 -->
+	<view class="notice-loop-container">
+		<image class="notice-icon" style=""></image>
+		<view class="box">
+			<view class="content-text" animation="{{animationData}}">
+				<!-- <view id="text">{{text}}</view> -->
+				<view id="text" wx:for="{{text}}" wx:key="{{index}}">{{item}}</view>
+			</view>
+		</view>
+	</view>
+</view>

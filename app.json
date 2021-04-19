@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/dialog/dialog"
+    "pages/dialog/dialog",
+    "pages/notices/notices"
   ],
   "window":{
     "backgroundTextStyle":"light",

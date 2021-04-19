@@ -3,4 +3,7 @@
   <button>
     <navigator url="../dialog/dialog">前往popup组件</navigator>
   </button>
+  <button>
+    <navigator url="../notices/notices">前往notice组件</navigator>
+  </button>
 </view>

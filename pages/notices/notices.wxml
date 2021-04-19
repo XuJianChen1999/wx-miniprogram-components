@@ -1,0 +1,4 @@
+<!--pages/notices/notices.wxml-->
+<notice text="{{text}}" />
+
+
