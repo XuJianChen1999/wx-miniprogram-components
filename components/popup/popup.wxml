@@ -1,0 +1,37 @@
+<!--components/popup/popup.wxml-->
+<view class="mk-click" bindtap="onClickShowModal"></view>
+
+<view class="main-container common" style="pointer-events: {{isShowModal ?'all':'none'}}">
+	<view class="bg-mk {{isShowModal?'bg-mk-ac':''}}" bindtap="onClickHideModal"></view>
+
+  <!-- 中间弹出 -->
+  <view wx:if="{{types==='middle'}}" class="middle-modal-container common {{isShowModal?'middle-modal-ac':'middle-modal-un'}}">
+    <view class="header-container common">
+      <view></view>
+			<text style="font-size:35rpx;font-weight:bolder">{{title}}</text>
+      <view style="font-size:32rpx;font-weight:bolder" bindtap="onClickHideModal">X</view>
+    </view>
+    <image wx:if="{{showMiddleModalImg}}" class="middle-modal-img"></image>
+    <view class="message">{{message}}</view>
+    <view class="btn-wrapper common">
+      <button style="height:65rpx;width:180rpx;font-size:30rpx" size="mini">取消</button>
+      <button bindtap="onClickConfirm" style="height:65rpx;width:180rpx;font-size:30rpx" size="mini" type="primary">确定</button>
+    </view>
+  </view>
+
+  <!-- 底部弹出 -->
+	<view wx:if="{{types==='bottom'}}" class="bottom-modal-container common {{isShowModal ?'bottom-modal-container-ac':''}}">
+		<view class="header-container common">
+      <view></view>
+			<text>{{title}}</text>
+      <view style="font-size:32rpx;font-weight:bolder" bindtap="onClickHideModal">X</view>
+		</view>
+    <view class="main-modal-content common">
+      <view class="list common" wx:for="{{list}}" wx:key="{{index}}">
+        <text>{{item.key}}</text>
+        <text>{{item.val}}</text>
+      </view>
+    </view>
+    <button type="primary" bindtap="onClickConfirm" style="margin-top:20rpx;height:65rpx;line-height:35rpx">确定</button>
+	</view>
+</view>

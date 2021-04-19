@@ -1,0 +1,12 @@
+<!--pages/dialog/dialog.wxml-->
+<view class="main-container">
+  <view style="position:relative">
+    <button>底部弹出</button>
+    <popup types="bottom" />
+  </view>
+
+  <view style="position:relative;margin-top:50rpx">
+    <button>中间弹出</button>
+    <popup bindonConfirm="observerOnConfirm" types="middle" />
+  </view>
+</view>

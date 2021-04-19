@@ -1,0 +1,141 @@
+/* components/popup/popup.wxss */
+.common{
+  display: flex;
+  align-items: center;
+}
+/* 隐藏滚动条 */
+::-webkit-scrollbar{
+  width: 4rpx;
+  height: 10rpx;
+  color: transparent;
+}
+.mk-click{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+.main-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+.bg-mk{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(75, 74, 74, 0.5);
+  transition: opacity cubic-bezier(0, 1.05, 0.6, 1.01) .7s; 
+}
+.bg-mk-ac{
+  opacity: 1;
+}
+.header-container{
+  justify-content: space-between;
+  width: 670rpx;
+  margin-top: 30rpx;
+}
+button{
+  margin: 0;
+  padding: 20rpx 0;
+}
+/* 中间弹出 */
+.middle-modal-container{
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 700rpx;
+  margin-top: 90rpx;
+  border-radius: 25rpx;
+  background-color: #fff;
+  transition: all 0.3s ease-in;
+}
+.middle-modal-ac{
+  transform: scale(1);
+}
+.middle-modal-un{
+  transform: scale(0);
+}
+.middle-modal-img{
+  width: 630rpx;
+  height: 300rpx;
+  margin: 25rpx 0;
+  border-radius: 25rpx;
+}
+.message{
+  width: 580rpx;
+  font-size: 30rpx;
+  color: #999999;
+  margin-top: 20rpx;
+}
+.btn-wrapper{
+  justify-content: space-between;
+  width: 600rpx;
+  margin: 80rpx 0 30rpx 0;
+}
+/* 右侧弹出 */
+.right-popup-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350rpx;
+  height: 100vh;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  transform: translateX(350rpx);
+  transition: transform cubic-bezier(0, 1.05, 0.6, 1.01) .3s;
+  border-radius: 30rpx 0 0 30rpx;
+  font-size: 80rpx;
+  font-weight: bolder;
+  color: red;
+}
+.right-popup-container-ac{
+  transform: translateX(0);
+}
+/* 底部弹出 */
+.bottom-modal-container{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 650rpx;
+  background-color: #fff;
+  transform: translateY(650rpx);
+  border-radius: 30rpx 30rpx 0 0;
+  transition: transform cubic-bezier(0, 1.05, 0.6, 1.01) .3s;
+}
+.bottom-modal-container-ac{
+  transform: translateY(0);
+}
+.main-modal-content{
+  flex-direction: column;
+  justify-content: center;
+  width: 680rpx;
+  height: 460rpx;
+  color: #666666;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.list{
+  /* flex: none; */
+  justify-content: space-between;
+  width: 100%;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}

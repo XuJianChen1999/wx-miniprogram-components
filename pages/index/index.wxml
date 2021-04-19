@@ -1,4 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  
+  <button>
+    <navigator url="../dialog/dialog">前往popup组件</navigator>
+  </button>
 </view>
