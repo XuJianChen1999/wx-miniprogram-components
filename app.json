@@ -7,7 +7,9 @@
     "pages/water/water",
     "pages/keyboard/keyboard",
     "pages/charge/charge",
-    "pages/load/load"
+    "pages/load/load",
+    "pages/shopcart/shopcart",
+    "pages/activity/activity"
   ],
   "window": {
     "backgroundTextStyle": "light",

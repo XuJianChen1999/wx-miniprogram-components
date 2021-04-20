@@ -1,0 +1,12 @@
+<!--pages/activity/activity.wxml-->
+<!-- <button style="position:fixed;top:0;left:25%;z-index:99">登录</button> -->
+
+<view class="container">
+  <view style="height:50vh;width:100vh;background:red"></view>
+  <view style="height:50vh;width:100vh">
+    <web-view src="https://m.car365.org/st/yuxicqu/om2.html?cvt=1&sc="></web-view>
+  </view>
+  
+</view>
+
+

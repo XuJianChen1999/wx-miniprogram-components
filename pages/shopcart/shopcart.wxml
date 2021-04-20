@@ -1,0 +1,43 @@
+<!--pages/shopcart/shopcart.wxml-->
+<view class="shopcart-main-container">
+	<checkbox-group bindchange="handleShopChange">
+    <view class="shop-item" wx:for="{{goodsList}}" wx:key="index">
+      <label style="display:flex;align-items:center">
+        <checkbox value="{{item.goods_id}}" checked="{{item.checked}}" />
+        <view style="display:flex">
+          <image></image>
+          <view class="content">
+            <view class="good-info">
+              <text class="name">{{item.goods_name}}</text>
+              <text class="size">我是商品的规格</text>
+            </view>
+            <view class="good-price-num">
+              <text>￥{{item.goods_price}}</text>
+              <view class="amount">
+                <view style="color:{{item.sales_num===1?'#c0c0c0':'#333'}}" data-type="decrease" data-id="{{item.goods_id}}" catchtap="handleCountChange">-</view>
+                <view>{{item.sales_num}}</view>
+                <view style="color:{{item.sales_num>=10?'#c0c0c0':'#333'}}" data-type="add" data-id="{{item.goods_id}}" catchtap="handleCountChange">+</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </label>
+    </view>
+  </checkbox-group>
+
+  <!-- 底部 -->
+  <view class="bottom-container">
+    <view class="bottom-wrapper">
+      <view class="inner">
+        <checkbox-group bindchange="onSelectAll">
+          <label class="checkall">
+            <checkbox value="all" checked="{{isAllChecked}}"></checkbox>
+            <text>全选</text>
+          </label>
+        </checkbox-group>
+      </view>
+      <text style="margin-right:20rpx">合计：￥{{totalPrice}}</text>
+    </view>
+    <view class="settlement">去结算({{totalCount}})</view>
+  </view>
+</view>

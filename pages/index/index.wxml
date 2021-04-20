@@ -1,6 +1,5 @@
 <!--index.wxml-->
 <wxs module="list">
-  var obj = {name: 'popup组件', path: '../dialog/dialog'}
   var components = [
     {name: 'popup组件', path: '../dialog/dialog'},
     {name: 'notice组件', path: '../notices/notices'},
@@ -8,7 +7,9 @@
     {name: 'waterfall组件', path: '../water/water'},
     {name: 'keyboard组件(数字和车辆键盘)', path: '../keyboard/keyboard'},
     {name: '波浪球动画组件', path: '../charge/charge'},
-    {name: 'loading组件', path: '../load/load'}
+    {name: 'loading组件', path: '../load/load'},
+    {name: '购物车', path: '../shopcart/shopcart'},
+    {name: '活动', path: '../activity/activity'}
   ]
   module.exports = {
     components: components
