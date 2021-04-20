@@ -9,4 +9,7 @@
   <button>
     <navigator url="../cal/cal">日历组件</navigator>
   </button>
+  <button>
+    <navigator url="../water/water">瀑布流组件</navigator>
+  </button>
 </view>

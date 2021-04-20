@@ -1,0 +1,37 @@
+<!--components/waterFall/waterFall.wxml-->
+<view class="waterfallflow-main-container">
+  <!-- 左侧部分 -->
+  <view class="fallflow-left-content">
+    <block wx:for="{{leftList}}" wx:key="index">
+      <view bind:tap="clickDom" data-data="{{item}}">
+        <image class='page_image class-image class-image-left' style='height:{{item.Height}}px' src='{{item.image}}'></image>
+        <view wx:if="{{item.title}}">
+          <view class='page_title class-title' style='height:{{item.waterfallGap}}px'>
+            <spen class='page_title_spen'>{{item.title}}</spen>
+          </view>
+        </view>
+        <view wx:if="{{!item.title}}" class='slot-title'>
+          <slot name="slot-{{ item.id }}"/>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view style="width:{{middleGap}};" />
+  <!-- 右侧部分 -->
+  <view class="fallflow-right-content">
+    <block wx:for="{{rightList}}" wx:key="index">
+      <view bind:tap="clickDom" data-data="{{item}}">
+        <image class='page_image class-image class-image-right' style='height:{{item.Height}}px' src='{{item.image}}'></image>
+        <view wx:if="{{item.title}}">
+          <view class='page_title class-title' style='height:{{item.waterfallGap}}px'>
+            <spen class='page_title_spen'>{{item.title}}</spen>
+          </view>
+        </view>
+        <view wx:if="{{!item.title}}" class='slot-title'>
+          <slot name="slot-{{item.id}}"/>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+

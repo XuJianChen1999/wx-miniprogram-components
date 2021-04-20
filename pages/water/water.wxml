@@ -1,0 +1,23 @@
+<!--pages/water/water.wxml-->
+<!-- 瀑布流插件 -->
+<view class="waterfall-main-contaienr">
+  <waterfallFlow
+    noramalData="{{allData}}"
+    middleGap="{{ middleGap }}"
+    cuSlotHeight1="60"
+    bind:clickDom="60"
+  >
+    <view wx:for="{{addMoreInfo}}" wx:key="index" wx:for-item="item" wx:for-index='index' slot="slot-{{item.id}}">
+      <view class="page-slot-contaienr">
+        <spen>ID:{{item.id}}</spen>
+        <spen class="custom-title">自定义标题-{{index}}</spen>
+      </view>
+    </view>
+  </waterfallFlow>
+</view>
+
+<view>
+  <button bindtap="addPageInfo">增加数据</button>
+</view>
+
+<!-- <waterfallFlow /> -->

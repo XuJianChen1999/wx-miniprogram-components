@@ -1,0 +1,36 @@
+/* components/waterFall/waterFall.wxss */
+.waterfallflow-main-container {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  border: 1px solid rebeccapurple;
+}
+
+.fallflow-left-content,
+.fallflow-right-content {
+  width: 50%;
+}
+
+.page_right {
+  width: 50%;
+}
+
+.page_image {
+  width: 100%;
+}
+
+.page_title {
+  width: 100%;
+  border-radius: 0 0 10rpx 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.page_title_spen {
+  color: rgb(116, 187, 187);
+  font-size: 13px;
+  font-weight: 700;
+}

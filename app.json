@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/dialog/dialog",
     "pages/notices/notices",
-    "pages/cal/cal"
+    "pages/cal/cal",
+    "pages/water/water"
   ],
   "window":{
     "backgroundTextStyle":"light",
