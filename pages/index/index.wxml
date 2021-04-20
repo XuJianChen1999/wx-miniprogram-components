@@ -7,7 +7,8 @@
     {name: 'calendar组件', path: '../cal/cal'},
     {name: 'waterfall组件', path: '../water/water'},
     {name: 'keyboard组件(数字和车辆键盘)', path: '../keyboard/keyboard'},
-    {name: '波浪球动画组件', path: '../charge/charge'}
+    {name: '波浪球动画组件', path: '../charge/charge'},
+    {name: 'loading组件', path: '../load/load'}
   ]
   module.exports = {
     components: components

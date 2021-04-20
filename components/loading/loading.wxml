@@ -1,0 +1,22 @@
+<!--components/loading/loading.wxml-->
+<view class="container" wx:if="{{isShowLoading}}">
+	<view class="mask"></view>
+	<!-- <view class="loading-container common">
+		<view class="rect1"></view>
+		<view class="rect2"></view>
+		<view class="rect3"></view>
+		<view class="rect4"></view>
+		<view class="rect5"></view>
+	</view> -->
+
+  <!-- 第二种 -->
+  <view class="sk-chase">
+    <view class="sk-chase-dot"></view>
+    <view class="sk-chase-dot"></view>
+    <view class="sk-chase-dot"></view>
+    <view class="sk-chase-dot"></view>
+    <view class="sk-chase-dot"></view>
+    <view class="sk-chase-dot"></view>
+  </view>
+</view>
+
