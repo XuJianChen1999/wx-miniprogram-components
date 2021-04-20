@@ -1,15 +1,20 @@
 <!--index.wxml-->
+<wxs module="list">
+  var obj = {name: 'popup组件', path: '../dialog/dialog'}
+  var components = [
+    {name: 'popup组件', path: '../dialog/dialog'},
+    {name: 'notice组件', path: '../notices/notices'},
+    {name: 'calendar组件', path: '../cal/cal'},
+    {name: 'waterfall组件', path: '../water/water'},
+    {name: 'keyboard组件(数字和车辆键盘)', path: '../keyboard/keyboard'}
+  ]
+  module.exports = {
+    components: components
+  }
+</wxs>
+
 <view class="container">
-  <button>
-    <navigator url="../dialog/dialog">popup组件</navigator>
-  </button>
-  <button>
-    <navigator url="../notices/notices">notice组件</navigator>
-  </button>
-  <button>
-    <navigator url="../cal/cal">日历组件</navigator>
-  </button>
-  <button>
-    <navigator url="../water/water">瀑布流组件</navigator>
+  <button wx:for="{{list.components}}" wx:key="index">
+    <navigator url="{{item.path}}">{{item.name}}</navigator>
   </button>
 </view>

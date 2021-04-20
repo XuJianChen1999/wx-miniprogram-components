@@ -1,0 +1,40 @@
+/* pages/keyboard/keyboard.wxss */
+.car-keyboard-container{
+  width: 100vw;
+  margin-top: 16rpx;
+  border-radius: 20rpx;
+  padding-bottom: 60rpx;
+}
+.switch-car-num{
+	width:20rpx;
+	height:20rpx;
+	margin-right:10rpx;
+}
+.car-title{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 32rpx 20rpx 0rpx 40rpx;
+}
+.text-theme{
+	font-size: 32rpx;
+	color:#5280C5;
+}
+.car-number{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100vw - 80rpx);
+  padding: 40rpx;
+}
+.car-block{
+	width:72rpx;
+	height:72rpx;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  border:1rpx solid #dbd6d6;
+  border-radius: 15rpx;
+  background: #FFF;
+}

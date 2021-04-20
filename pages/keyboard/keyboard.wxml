@@ -1,0 +1,27 @@
+<!--pages/keyboard/keyboard.wxml-->
+<view style="width:300rpx;height:100rpx;position:relative">
+	<button style="z-index:-1">键盘</button>
+	<!-- <keyboard type="{{type}}" isShowKeyboard="{{isShowKeyboard}}" /> -->
+
+
+	<view class="car-keyboard-container">
+		<view class="car-num">
+			<view class="car-title">
+				<view class="text-theme" data-index="{{index}}" bindtap="changeCarType">
+					<image class="switch-car-num" src="https://img.zhxcxmall.com//1588228597896-959"></image>
+					{{carType===2?"切换为普通车牌号":"切换为新能源车牌号"}}
+				</view>
+			</view>
+			<view class="car-number">
+				<block wx:for="{{carBoxNum}}" wx:for-item="itm" wx:for-index="idx" data-index="{{index}}" wx:key="index">
+					<view class="car-block" bindtap="openCarBoard">
+						{{carNumStr[idx]}}
+					</view>
+					<text wx:if="{{idx === 0}}">·</text>
+				</block>
+			</view>
+		</view>
+    <keyboard style="position:fixed;bottom:0;z-index:99" abc="{{abc}}" carNum="{{carNumStr}}" isCarBoard="{{isShowKeyboard}}" bind:carValue="handleCarValue" bind:myevent="onClickCarEvent"></keyboard>
+	</view>
+	
+</view>

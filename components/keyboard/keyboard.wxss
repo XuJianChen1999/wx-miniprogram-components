@@ -1,0 +1,267 @@
+/* components/keyboard/keyboard.wxss */
+/* 数字键盘样式 */
+.mk-click{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+}
+.bg-click{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-color: rgba(75, 74, 74, 0.5);
+  transition: opacity cubic-bezier(0, 1.05, 0.6, 1.01) .5s;
+}
+.bg-click-ac{
+  opacity: 1;
+}
+.keyboard-input-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+/* 密码输入框 */
+.password-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 600rpx;
+  padding: 30rpx;
+  margin-top: 50rpx;
+  border-radius: 15rpx;
+  background-color: #fff;
+}
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.title-txt{
+  font-size: 35rpx;
+}
+.fee-money{
+  margin: 20rpx 0;
+  font-size: 50rpx;
+  font-weight: bolder;
+}
+.fee-money::before{
+  content: '￥';
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.input-value-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+.value-item{
+  width: 90rpx;
+  height: 85rpx;
+  line-height: 85rpx;
+  font-weight: bolder;
+  border-right: 1px solid #e5e5e5;
+}
+.pwd-ac{
+  transform: scale(1);
+}
+.pwd-un{
+  transform: scale(0);
+}
+.value-item:last-child{
+  border-right: 0;
+}
+/* 数字键盘 */
+.keyboard-number-container{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 50rpx;
+  background-color: #f9f9fa;
+  border-top: 1px solid #f9f9fa;
+  box-shadow: 2rpx 10rpx 5rpx #f9f9fa;
+  background-color: #f9f9fa;
+  transform: translateY(680rpx);
+  transition: transform cubic-bezier(0, 1.05, 0.6, 1.01) .7s;
+}
+.number-item{
+  width: 33%;
+  line-height: 120rpx;
+  color: #333;
+  font-size: 35rpx;
+  font-weight: bolder;
+  text-align: center;
+  border-bottom: 1px solid #f9f9fa;
+  border-right: 1px solid #f9f9fa;
+  background-color: #fff;
+}
+.number-box-ac{
+  transform: translateY(0);
+}
+.number-item:not(:nth-child(3n)){
+  border-right: 0;
+}
+.number-item:active{
+  background-color: #f9f9fa;
+}
+
+
+/* 车牌号键盘 */
+.keyboard-box{
+	position: fixed;
+	bottom: 0;
+	left:0;
+	z-index:999;
+	animation: myfirst 0.3s ease-in-out;
+}
+
+@keyframes myfirst {
+  from {
+    height: 0rpx;
+  }
+  to {
+    height: 530rpx;
+  }
+}
+.u-keyboard {
+	position: relative;
+	z-index: 1003;
+}
+
+.u-tooltip {
+	display: flex;
+	justify-content: space-between;
+	background-color: #ffffff;
+	padding: 0 25rpx;
+}
+
+.u-tooltip-item {
+	color: #333333;
+	text-align: center;
+	padding: 20rpx 0rpx;
+	font-size: 28rpx;
+}
+
+.u-tooltips-submit {
+	color: #2979ff;
+}
+
+.u-tooltip-cancel {
+	text-align: left;
+	color: #888888;
+}
+
+.u-tooltips-submit-hover {
+	color: #19be6b;
+}
+
+.u-tooltip-cancel-hover {
+	color: #333333;
+}
+.u-keyboard-grids {
+	background: rgb(215, 215, 217);
+	padding: 24rpx 0;
+	position: relative;
+	text-align: center;
+}
+
+.u-keyboard-grids-item {
+	display: inline-block;
+}
+
+.u-keyboard-grids-btn {
+	text-decoration: none;
+	width: 62rpx;
+	flex: 0 0 64rpx;
+	height: 80rpx;
+	display: inline-block;
+	font-size: 36rpx;
+	text-align: center;
+	line-height: 80rpx;
+	background-color: #fff;
+	margin: 8rpx 5rpx;
+	border-radius: 8rpx;
+	box-shadow: 0 2rpx 0rpx #888992;
+	font-weight: 500;
+}
+
+.u-carinput-hover {
+	background-color: rgb(185, 188, 195) !important;
+}
+
+.u-keyboard-back {
+	position: absolute;
+	width: 96rpx;
+	right: 22rpx;
+	bottom: 32rpx;
+	height: 80rpx;
+	background-color: rgb(185, 188, 195);
+	display: flex;
+	align-items: center;
+	border-radius: 8rpx;
+	justify-content: center;
+	box-shadow: 0 2rpx 0rpx #888992;
+}
+
+.u-keyboard-change {
+	font-size: 24rpx;
+	box-shadow: 0 2rpx 0rpx #888992;
+	position: absolute;
+	width: 96rpx;
+	left: 22rpx;
+	line-height: 1;
+	bottom: 32rpx;
+	height: 80rpx;
+	background-color: #ffffff;
+	display: flex;
+	align-items: center;
+	border-radius: 8rpx;
+	justify-content: center;
+}
+
+.u-keyboard-change .inactive.zh {
+	transform: scale(0.85) translateY(-10rpx);
+}
+
+.u-keyboard-change .inactive.en {
+	transform: scale(0.85) translateY(10rpx);
+}
+
+.u-keyboard-change .active {
+	color: rgb(237, 112, 64);
+	font-size: 30rpx;
+}
+
+.u-keyboard-change .zh {
+	transform: translateY(-10rpx);
+}
+
+.u-keyboard-change .en {
+	transform: translateY(10rpx);
+}
+.backward{
+	width:60%;
+	height: 70%;
+	filter: contrast(50%);
+}
