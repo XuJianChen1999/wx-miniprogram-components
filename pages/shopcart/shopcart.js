@@ -62,7 +62,8 @@ Page({
     isAllChecked: false, //是否全选
     checkedArr: [], //复选框选中的值
     totalPrice: 0,
-    totalCount: 0
+    totalCount: 0,
+    status: 'account',//account结算，edit删除编辑状态
   },
   //选择购物车商品
   handleShopChange(e){
@@ -129,6 +130,20 @@ Page({
       goodsList
     })
     this.calTotalCountPrice()
+  },
+  //购物车状态
+  onClickEdit(){
+    let { status } = this.data
+    if (status === 'account'){
+      this.setData({
+        status: 'edit'
+      })
+      return
+    } 
+    this.setData({
+      status: 'account'
+    })
+    console.log(this.data.status)
   },
   //计算总数
   calTotalCountPrice(){

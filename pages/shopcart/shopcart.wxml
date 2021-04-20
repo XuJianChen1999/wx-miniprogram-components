@@ -1,5 +1,9 @@
 <!--pages/shopcart/shopcart.wxml-->
 <view class="shopcart-main-container">
+  <view class="opertion-container">
+    <view class="address">山东省青岛市城阳区古兰镇138号</view>
+    <view bindtap="onClickEdit">编辑商品</view>
+  </view>
 	<checkbox-group bindchange="handleShopChange">
     <view class="shop-item" wx:for="{{goodsList}}" wx:key="index">
       <label style="display:flex;align-items:center">
@@ -36,8 +40,8 @@
           </label>
         </checkbox-group>
       </view>
-      <text style="margin-right:20rpx">合计：￥{{totalPrice}}</text>
+      <text style="margin-right:20rpx" wx:if="{{status==='account'}}">合计：￥{{totalPrice}}</text>
     </view>
-    <view class="settlement">去结算({{totalCount}})</view>
+    <view class="settlement">{{status==='account'?'去结算':'删除'}}({{totalCount}})</view>
   </view>
 </view>

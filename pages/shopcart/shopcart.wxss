@@ -5,6 +5,19 @@
   flex-direction: column;
   justify-content: center;
 }
+.opertion-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 700rpx;
+}
+.address{
+  width: 350rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .shop-item{
   width: 700rpx;
   margin-top: 35rpx;
