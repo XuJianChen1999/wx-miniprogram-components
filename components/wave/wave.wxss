@@ -1,0 +1,46 @@
+/* components/wave/wave.wxss */
+.wave-ball-container{
+  position: relative;
+  width: 350rpx;
+  height: 350rpx;
+  border-radius: 50%;
+  background-color: #12FFBE;
+  overflow: hidden;
+  border: 8rpx solid #c6ffed;
+  z-index: 100;
+}
+.wave-wrapper {
+  position: absolute;
+  left: 50%;
+  width: 700rpx;
+  height: 700rpx;
+  background-color: #fff;
+  border-radius: 50%;
+   /* 动画完成花费的时间 */
+  animation-duration: 2s;
+  animation-name: rotate;
+  /* 动画从头到尾的速度是相同的 */
+  animation-timing-function: linear;
+  /* 无限次播放动画 */
+  animation-iteration-count: infinite;
+}
+.percent-txt{
+  position: absolute;
+  z-index: 200;
+  left: 35%;
+  top: 40%;
+  font-size: 76rpx;
+  font-weight: 500;
+}
+/* 过渡动画 */
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, 0) rotateZ(0deg);
+  }
+  50% {
+    transform: translate(-50%, -1%) rotateZ(180deg);
+  }
+  100% {
+    transform: translate(-50%, 0) rotateZ(360deg);
+  }
+}

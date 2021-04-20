@@ -5,7 +5,8 @@
     "pages/notices/notices",
     "pages/cal/cal",
     "pages/water/water",
-    "pages/keyboard/keyboard"
+    "pages/keyboard/keyboard",
+    "pages/charge/charge"
   ],
   "window": {
     "backgroundTextStyle": "light",

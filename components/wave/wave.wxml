@@ -1,0 +1,5 @@
+<!--components/wave/wave.wxml-->
+<view class="wave-ball-container">
+  <view class="wave-wrapper" style="bottom:{{percent}}%"></view>
+  <view class="percent-txt">{{percent}}%</view>
+</view>

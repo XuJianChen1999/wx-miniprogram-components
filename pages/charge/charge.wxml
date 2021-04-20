@@ -1,0 +1,2 @@
+<!--pages/charge/charge.wxml-->
+<wave percent="{{num}}" />
