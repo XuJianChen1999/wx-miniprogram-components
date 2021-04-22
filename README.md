@@ -44,7 +44,11 @@ util.js使用方法
 
     获取用户信息
     //在app.js中要传this，不能写app
-    Util.getUserInfo(app. userId)
+    async getUserInfo() {
+        await Util.getUserInfo(app, userId)
+        console.log(app.globalData)
+    }
+    
 
 
     获取身份验证信息和设备id
@@ -58,13 +62,13 @@ util.js使用方法
 
 modules使用方法
 
-    已shopListModule.js为例，这里是关于所有商品相关的请求；使用是static后我们就不用去实例化里面的方法
+    以shopListModule.js为例，这里是关于所有商品相关的请求；使用是static后我们就不用去实例化里面的方法
     直接调用即可
 
     1、在顶部引入这个js文件
     const { ShopModules } = require('../modules/shopModule.js)
 
-    2、使用(已第一个为例)
+    2、使用(以第一个为例)
     ShopModules.getShopList('food', res => {
         console.log(res)
     }).catch(err => {
