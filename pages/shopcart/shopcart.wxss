@@ -1,68 +1,132 @@
 /* pages/shopcart/shopcart.wxss */
-.shopcart-main-container{
+.shopcart-main-container {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
-.opertion-container{
+
+.opertion-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 700rpx;
 }
-.address{
+
+.address {
   width: 350rpx;
+  color: #FF9400;
   font-size: 28rpx;
   overflow: hidden;
+  font-weight: bold;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.shop-item{
+
+.edit {
+  color: #ef5656;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.shop-item {
   width: 700rpx;
+  overflow: hidden;
   margin-top: 35rpx;
   padding-bottom: 30rpx;
   border-bottom: 1px solid #f1f1f1;
 }
-.shop-item:last-child{
+
+.touch-wrapper {
+  width: 100%;
+  margin-right: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(90rpx);
+  transform: translateX(90rpx);
+  margin-left: -90rpx;
+}
+
+.shop-item:last-child {
   border-bottom: 0;
   margin-bottom: 100rpx;
 }
-image{
-  width: 150rpx;
-  height: 150rpx;
+
+image {
+  width: 160rpx;
+  height: 160rpx;
   margin: 0 25rpx;
   border-radius: 15rpx;
   background-color: red;
 }
-.good-info{
-  margin-top: 10rpx;
+
+.good-info {
+  display: flex;
+  flex-direction: column;
+  color: #3D444D;
 }
-.good-price-num{
+
+.del {
+  width: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 35rpx;
+  transition: all 0.4s ease;
+  transform: translateX(90rpx);
+}
+
+.touch-move-active.touch-move-active .del {
+  transform: translateX(0);
+}
+
+.good-price-num {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 400rpx;
+  width: 430rpx;
   margin-top: 30rpx;
 }
-.amount{
+
+.amount {
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 28rpx;
 }
-.amount view{
-  width: 70rpx;
-  line-height: 50rpx;
+
+.amount view {
+  width: 50rpx;
+  line-height: 40rpx;
   text-align: center;
   background-color: #f1f1f1;
 }
-.amount view:nth-child(2){
-  border-left: 1px solid rgb(117, 114, 114);
-  border-right: 1px solid rgb(117, 114, 114);
+
+/* 修改checkbox样式 */
+checkbox .wx-checkbox-input {
+  border-radius: 50%;
+  transform: scale(0.8);
 }
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  border-color: #FF9A00;
+  background-color: #FF9A00;
+}
+
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  color: #fff;
+  font-size: 25rpx;
+  line-height: 20rpx;
+  text-align: center;
+  transform: scale(0.8);
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
 /* 底部 */
-.bottom-container{
+.bottom-container {
   position: fixed;
   left: 0;
   right: 0;
@@ -72,27 +136,51 @@ image{
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 100rpx;
-  background-color: thistle;
+  height: 90rpx;
+  background-color: #fff;
+  box-shadow: 12rpx 0 15rpx rgba(0, 0, 0, 0.16)
 }
-.bottom-wrapper{
+
+.bottom-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
   height: 100%;
 }
-.checkall{
+
+.checkall {
   display: flex;
   align-items: center;
-  margin-left: 20rpx;
+  color: #333;
+  font-size: 26rpx;
+  margin-left: 25rpx;
 }
-.settlement{
+
+.settlement {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40%;
-  height: 100%;
+  height: 60rpx;
   color: #fff;
+  margin-right: 30rpx;
+}
+
+.total-text {
+  color: #ef5656;
+  font-size: 33rpx;
+  font-weight: bold;
+  margin-right: 15rpx;
+}
+
+.total-text::before {
+  content: '合计：';
+  color: #3D444D;
+  font-weight: 400;
+}
+
+.pay {
+  font-size: 26rpx;
+  padding: 10rpx 20rpx;
+  border-radius: 50rpx;
   background-color: red;
 }

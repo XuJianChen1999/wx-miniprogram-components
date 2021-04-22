@@ -5,27 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    cartShops: [
-      {
-        shop_name: '店铺1',
-        shop_id: 1
-      },
-      {
-        shop_name: '店铺2',
-        shop_id: 2
-      }
-    ],
+    clientX: 0, //开始坐标
+    clientY: 0,
     goodsList: [
       {
         goods_name: '上衣',
-        goods_price: 10,
+        goods_price: 10.59,
         sales_num: 1,
         goods_stock: 10,
         goods_id: '0'
       },
       {
         goods_name: '裤子',
-        goods_price: 20,
+        goods_price: 20.69,
         sales_num: 1,
         goods_stock: 8,
         goods_id: '1'
@@ -63,32 +55,24 @@ Page({
     checkedArr: [], //复选框选中的值
     totalPrice: 0,
     totalCount: 0,
-    status: 'account',//account结算，edit删除编辑状态
+    status: 'pay',//account结算，delete删除编辑状态
+  },
+  onDelete(){
+    console.log(1212)
   },
   //选择购物车商品
   handleShopChange(e){
     let { goodsList, isAllChecked } = this.data
     let values = e.detail.value
     for (let item of goodsList) {
+      //有时候id可能是number也有可能是string，这里做统一string处理
       let goodId = String(item.goods_id)
       // 如果要检索的字符串值没有出现，则返回 -1。
-      if (values.indexOf(goodId) >= 0) {
-        item.checked = true
-      } else {
-        item.checked = false
-      }
+      values.indexOf(goodId) >= 0 ? item.checked = true : item.checked = false
     }
-    // this.setData({
-    //   checkedArr: values
-    // })
-    this.data.checkedArr = values
-    let length = this.data.checkedArr.length
+    let length = values.length
     // 如果选择的数组中有值，并且长度等于列表长度，就是全选
-    if (length > 0 && length === goodsList.length) {
-      isAllChecked = true
-    } else {
-      isAllChecked = false
-    }
+    length > 0 && length === goodsList.length ? isAllChecked = true : isAllChecked = false
     this.setData({
       isAllChecked
     })
@@ -97,12 +81,13 @@ Page({
   //加减数量
   handleCountChange(e){
     const { type, id } = e.currentTarget.dataset
-    console.log(id)
     let { goodsList } = this.data
     if (type === 'add') {
+      //最大数量显示10个
       if (goodsList[id].sales_num >= 10) return
       goodsList[id].sales_num++
     } else {
+      //最小数量限制一个
       if (goodsList[id].sales_num === 1) return
       goodsList[id].sales_num--
     }
@@ -134,21 +119,20 @@ Page({
   //购物车状态
   onClickEdit(){
     let { status } = this.data
-    if (status === 'account'){
+    if (status === 'pay'){
       this.setData({
-        status: 'edit'
+        status: 'delete'
       })
       return
     } 
     this.setData({
-      status: 'account'
+      status: 'pay'
     })
-    console.log(this.data.status)
   },
   //计算总数
   calTotalCountPrice(){
     let { goodsList, totalCount, totalPrice } = this.data
-    //初始化
+    //每次执行的时候初始化，防止重复计算
     totalCount = 0
     totalPrice = 0
     for (let i = 0; i < goodsList.length; i++) {
@@ -160,7 +144,35 @@ Page({
     }
     this.setData({
       totalCount,
-      totalPrice
+      totalPrice: totalPrice.toFixed(2)
+    })
+  },
+  /**
+  * 计算滑动角度
+  * @param {Object} start 起点坐标
+  * @param {Object} end 终点坐标
+  */
+  angle(start,end){
+    let X = end.X - start.X,
+    Y = end.Y - start.Y
+    console.log(360 * Math.atan(Y / X) / (2 * Math.PI))
+    return 360 * Math.atan(Y / X) / (2 * Math.PI)
+  },
+  //结算和删除
+  onPayOrDelete(){
+    const { status } = this.data
+    console.log(status)
+    status === 'delete' && this.deleteShopCartList()
+    status === 'pay' && this.payShopCartPrice()
+  },
+  deleteShopCartList(){
+    wx.showToast({
+      title: 'delete',
+    })
+  },
+  payShopCartPrice(){
+    wx.showToast({
+      title: 'pay price',
     })
   },
   onShow: function () {

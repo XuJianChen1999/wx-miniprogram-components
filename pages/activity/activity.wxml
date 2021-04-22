@@ -1,12 +1,13 @@
 <!--pages/activity/activity.wxml-->
-<!-- <button style="position:fixed;top:0;left:25%;z-index:99">登录</button> -->
+<view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" wx:for="{{list}}" wx:key>
+　　<view class="content">
+　　　　<view style="{{item.txtStyle}}" class='item' data-index='{{index}}' bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchE">
+　　　　<view class='title'>{{item.title}}</view>
+　　　　<text>{{item.create_time}}</text>
+　　</view>
+</view>
 
-<view class="container">
-  <view style="height:50vh;width:100vh;background:red"></view>
-  <view style="height:50vh;width:100vh">
-    <web-view src="https://m.car365.org/st/yuxicqu/om2.html?cvt=1&sc="></web-view>
-  </view>
-  
+<view class="del" data-id="{{item.id}}" catchtap="delBtn" data-index="{{index}}">删除</view>
 </view>
 
 
