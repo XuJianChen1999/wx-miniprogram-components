@@ -5,8 +5,10 @@
 
 util.js使用方法
 
-1、首先在js文件中引入
-const Util = require('../utils/util.js')
+    1、首先在js文件中引入
+    const Util = require('../utils/util.js')
+
+    2、部分方法使用
 
     防抖函数的使用
     Util.doubunce(() => {
@@ -51,3 +53,20 @@ const Util = require('../utils/util.js')
 
     生成随机字符串
     let randomStr = Util.getRandomCode()
+
+
+
+modules使用方法
+
+    已shopListModule.js为例，这里是关于所有商品相关的请求；使用是static后我们就不用去实例化里面的方法
+    直接调用即可
+
+    1、在顶部引入这个js文件
+    const { ShopModules } = require('../modules/shopModule.js)
+
+    2、使用(已第一个为例)
+    ShopModules.getShopList('food', res => {
+        console.log(res)
+    }).catch(err => {
+        console.log(err)
+    })
