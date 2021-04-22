@@ -1,6 +1,7 @@
 // index.js
 // 获取应用实例
 const app = getApp()
+const regUtil = require('../../utils/regularUtil.js')
 
 Page({
   data: {
@@ -18,6 +19,8 @@ Page({
     })
   },
   onLoad() {
+    let a = regUtil.isDecimal(12)
+    console.log(a)
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
