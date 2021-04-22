@@ -3,7 +3,7 @@
   <view class="mask-click" catchtap="onClickDiscountItem"></view>
   <view class="coupon-container">
     <view class="discount margin">
-      <text style="font-size:36rpx">这是名字</text>
+      <view class="name">这是名字这是名字这是名字这是名字</view>
       <text style="font-size:45rpx;font-weight:bolder">￥2000</text>
     </view>
     <view class="discount padding">
@@ -15,7 +15,7 @@
         <text style="font-size:25rpx">使用规则</text>
         <view style="{{isShowRules?'transform:rotateZ(360deg)':''}}" class="{{isShowRules?'top-triangle':'triangle'}}"></view>
       </view>
-      <view></view>
+      <view class="type">这是优惠券的类型</view>
     </view>
   </view>
   <view class="rules-container" hidden="{{!isShowRules}}">

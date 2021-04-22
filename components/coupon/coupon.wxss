@@ -15,7 +15,6 @@
   radial-gradient(circle at left bottom, transparent 10px, #F58055 0) top left / 50% 51px no-repeat,
   radial-gradient(circle at right top, transparent 10px, #F58055 0) bottom right / 50% 51px no-repeat,
   radial-gradient(circle at left top, transparent 10px, #F58055 0) bottom left / 50% 51px no-repeat;
-  
 }
 .discount{
   display: flex;
@@ -24,6 +23,14 @@
   width: 600rpx;
   color: #ffffff;
 }
+.name{
+  width: 330rpx;
+  font-size: 35rpx;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .margin{
   margin: 10rpx 0;
 }
@@ -31,6 +38,10 @@
   margin-bottom: 15rpx;
   padding-bottom: 20rpx;
   border-bottom: 1px solid #fff;
+}
+.type{
+  color: #fff;
+  font-size: 25rpx;
 }
 .wrapper{
   display: flex;
