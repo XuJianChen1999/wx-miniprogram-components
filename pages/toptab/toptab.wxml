@@ -1,0 +1,2 @@
+<!--pages/toptab/toptab.wxml-->
+<tabs tabs="{{tabs}}" styles="{{styles}}" bindonTabBarChange="onTabChange" />

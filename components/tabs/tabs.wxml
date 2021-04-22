@@ -1,0 +1,4 @@
+<!--components/tabs/tabs.wxml-->
+<view class="tab-main-container" style="background:{{styles.bgColor}}">
+  <view wx:for="{{tabs}}" style="font-size:{{styles.fontSize}}rpx" wx:key="index" class="tab-item-container {{curTabLabel===item?'tab-item-active':''}}" data-label="{{item}}" catchtap="onClickTabItem">{{item}}</view>
+</view>

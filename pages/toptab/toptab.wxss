@@ -1,0 +1,6 @@
+/* pages/toptab/toptab.wxss */
+page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

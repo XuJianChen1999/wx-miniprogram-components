@@ -1,0 +1,23 @@
+/* components/tabs/tabs.wxss */
+.tab-main-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 670rpx;
+  margin-top: 40rpx;
+  border-radius: 8rpx;
+  /* background-color: #E4E4E4; */
+}
+.tab-item-container{
+  flex: 1;
+  height: 80rpx;
+  color: #353135;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80rpx;
+}
+.tab-item-active{
+  color: #fff;
+  border-radius: 10rpx;
+  background-color: #5280C5;
+}

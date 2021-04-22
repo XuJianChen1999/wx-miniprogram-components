@@ -9,7 +9,8 @@
     "pages/charge/charge",
     "pages/load/load",
     "pages/shopcart/shopcart",
-    "pages/activity/activity"
+    "pages/activity/activity",
+    "pages/toptab/toptab"
   ],
   "window": {
     "backgroundTextStyle": "light",
