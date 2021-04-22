@@ -1,0 +1,91 @@
+/* components/coupon/coupon.wxss */
+.discount-coupon-container{
+  position: relative;
+  width: 680rpx;
+}
+.coupon-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 680rpx;
+  height: 200rpx;
+  margin: 20rpx auto 0;
+  border-radius: 15rpx;
+  background: radial-gradient(circle at right bottom, transparent 10px, #F58055 0) top right /50% 51px no-repeat,
+  radial-gradient(circle at left bottom, transparent 10px, #F58055 0) top left / 50% 51px no-repeat,
+  radial-gradient(circle at right top, transparent 10px, #F58055 0) bottom right / 50% 51px no-repeat,
+  radial-gradient(circle at left top, transparent 10px, #F58055 0) bottom left / 50% 51px no-repeat;
+  
+}
+.discount{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600rpx;
+  color: #ffffff;
+}
+.margin{
+  margin: 10rpx 0;
+}
+.padding{
+  margin-bottom: 15rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #fff;
+}
+.wrapper{
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+}
+.triangle{
+  width: 0;
+  height: 0;
+  /* 三角形旋转 */
+  transition: 0.5s;
+  margin-top: 15rpx;
+  margin-left: 10rpx;
+  border: 13rpx solid #fff;
+  border-left: 13rpx solid transparent;
+  border-right: 13rpx solid transparent;
+  border-bottom: 13rpx solid transparent;
+}
+.top-triangle{
+  width: 0;
+  height: 0;
+  transition: 0.5s;
+  margin-left: 10rpx;
+  margin-bottom: 15rpx;
+  border: 13rpx solid #fff;
+  border-top: 13rpx solid transparent;
+  border-left: 13rpx solid transparent;
+  border-right: 13rpx solid transparent;
+}
+/* 规则 */
+.rules-container{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 680rpx;
+  padding: 10rpx 0;
+  margin-top: -10rpx;
+  background-color: #F58055;
+  border-radius: 0 0 15rpx 15rpx;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .2));
+}
+.rule-item{
+  width: 600rpx;
+  color: #fff;
+  font-size: 23rpx;
+  margin-bottom: 10rpx;
+}
+/* 蒙层点击区域 */
+.mask-click{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 680rpx;
+  height: 140rpx;
+}

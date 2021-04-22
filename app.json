@@ -10,7 +10,8 @@
     "pages/load/load",
     "pages/shopcart/shopcart",
     "pages/activity/activity",
-    "pages/toptab/toptab"
+    "pages/toptab/toptab",
+    "pages/discount/discount"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,27 @@
+<!--components/coupon/coupon.wxml-->
+<view class="discount-coupon-container">
+  <view class="mask-click" catchtap="onClickDiscountItem"></view>
+  <view class="coupon-container">
+    <view class="discount margin">
+      <text style="font-size:36rpx">这是名字</text>
+      <text style="font-size:45rpx;font-weight:bolder">￥2000</text>
+    </view>
+    <view class="discount padding">
+      <text style="font-size:23rpx">有效期：2021-07-22</text>
+      <text style="font-size:23rpx">面额：3000</text>
+    </view>
+    <view class="discount">
+      <view class="wrapper" bindtap="onClickShowRules">
+        <text style="font-size:25rpx">使用规则</text>
+        <view style="{{isShowRules?'transform:rotateZ(360deg)':''}}" class="{{isShowRules?'top-triangle':'triangle'}}"></view>
+      </view>
+      <view></view>
+    </view>
+  </view>
+  <view class="rules-container" hidden="{{!isShowRules}}">
+    <view class="rule-item">1、不与其他优惠活动叠加使用不与其他优惠活动叠加使用不与其他优惠活动叠加使用不与其他优惠活动叠加使用</view>
+    <view class="rule-item">2、我也不知道规则是什么</view>
+    <view class="rule-item">3、这是瞎写的，哈哈哈哈哈哈哈啊哈哈</view>
+  </view>
+</view>
+

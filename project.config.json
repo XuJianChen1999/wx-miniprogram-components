@@ -69,6 +69,13 @@
 					"id": -1,
 					"name": "pages/shopcart/shopcart",
 					"pathName": "pages/shopcart/shopcart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/discount/discount",
+					"pathName": "pages/discount/discount",
 					"scene": null
 				}
 			]

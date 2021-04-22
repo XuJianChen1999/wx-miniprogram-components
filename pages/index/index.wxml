@@ -9,7 +9,8 @@
     {name: '波浪球动画组件', path: '../charge/charge'},
     {name: 'loading组件', path: '../load/load'},
     {name: '购物车', path: '../shopcart/shopcart'},
-    {name: 'tab组件', path: '../toptab/toptab'}
+    {name: 'tab组件', path: '../toptab/toptab'},
+    {name: '优惠券组件', path: '../discount/discount'}
   ]
   module.exports = {
     components: components
